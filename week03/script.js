@@ -1,16 +1,3 @@
-
-
-/* get the elements that we want to modifyed. 
-figure out when the modfiication should occur.
-modify the elements
-loop though each element 
-figure out which one it is 
-output that number.
-
-figure out where/how we are going ot display the message...get a reference 
-figure out what day it is
-update the display */
-
 function displayWelcome()
 {
     const headerEl = document.querySelector("header");
@@ -41,6 +28,16 @@ function menu() {
 }
 
 document.querySelector(".menu-btn").addEventListener("click", menu);
+
+//click event listener for the menu button
+const menuBtn = document.querySelector(".menu-btn");
+const navEl = document.querySelector(".menu-nav");
+
+function toggleMenu() {
+    navEl.classList.toggle("hide");
+    menuBtn.classList.toggle("change");
+}
+menuBtn.addEventListener("click", toggleMenu);
 
 
 

@@ -1,11 +1,19 @@
-const selectElem = document.querySelector("#theme-select");
 
-selectElem.addEventListener("change", changeTheme);
+let selectElem = document.querySelector('select');
+let logo = document.querySelector('img');
+
+selectElem.addEventListener('change', changeTheme);
 
 function changeTheme() {
-  if (selectElem.value === "dark") {
-    document.body.classList.add("dark");
-  } else {
-    document.body.classList.remove("dark");
-  }
-}
+    let current = selectElem.value;
+    if (current == 'dark') {
+        // code for changes to colors and logo
+        document.body.classList.add('dark');
+        logo.src = 'dark-logo.png';
+    } else {
+        // code for changes to colors and logo
+        document.body.classList.remove('dark');
+        logo.src = 'light-logo.png';
+    }
+}           
+                    

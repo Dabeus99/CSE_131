@@ -22,17 +22,23 @@ h1 {
     font-size: 2rem;
 }
 
+.menu-btn {
+    Background: none;
+    border: none;
+    color: #e9f4f7;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 0.5rem;
-    background-color: #2a81e2;
+    display: none;
+   
 }
 
 nav a {
     color: #e9f4f7;
     padding: 0.5rem;
+    text-decoration: none;
 }
 
 main {
@@ -48,7 +54,7 @@ h2 {
 
 .image-container {
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-items: center;
     gap: 1rem;
     padding: 1rem;
@@ -71,19 +77,32 @@ footer {
     color: #e9f4f7;
 }
 
+
+
+
+
+
+
+
 @media (min-width: 700px) {
+
+.menu-btn {
+    display: none;
+}
+
 nav {
     display: flex;
+    justify-content: center;
     gap: 1rem;
 }
 
 .image-container {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 }
 
 @media (min-width: 1000px) {
     .image-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }

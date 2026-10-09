@@ -27,18 +27,14 @@ function menu() {
     document.querySelector("nav").classList.toggle("open");
 }
 
-document.querySelector(".menu-btn").addEventListener("click", menu);
 
-//click event listener for the menu button
 const menuBtn = document.querySelector(".menu-btn");
 const navEl = document.querySelector(".menu-nav");
 
-function toggleMenu() {
-    navEl.classList.toggle("hide");
-    menuBtn.classList.toggle("change");
-}
-menuBtn.addEventListener("click", toggleMenu);
-
+menuBtn.addEventListener("click", () => {
+  navEl.classList.toggle("hide");
+  menuBtn.classList.toggle("change");
+});
 
 
 displayWelcome();

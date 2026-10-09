@@ -4,20 +4,25 @@ const modal = document.querySelector('dialog');
 const modalImage = modal.querySelector('img');
 const closeButton = modal.querySelector('.close-viewer');
 
-// Event listener for opening the modal
 gallery.addEventListener('click', openModal);
 
 function openModal(e) {
-    
-// Code to show modal  - Use event parameter 'e'   
-    
+  const clickedImage = e.target.closest("img");
+  if (!clickedImage) return;
+
+
+  modalImage.src = clickedImage.src.replace("-sm.jpg", ".jpg");
+  modalImage.alt = clickedImage.alt;
+
+  modal.showModal();
 }
-// Close modal on button click
+    
+
 closeButton.addEventListener('click', () => {
     modal.close();
 });
 
-// Close modal if clicking outside the image
+
 modal.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.close();

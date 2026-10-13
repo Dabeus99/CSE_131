@@ -12,6 +12,7 @@ function openModal(e) {
 
 
   modalImage.src = clickedImage.src.replace("-sm.jpg", ".jpg");
+  modalImage.src = clickedImage.src;
   modalImage.alt = clickedImage.alt;
 
   modal.showModal();

@@ -18,6 +18,23 @@ header {
     
 }
 
+dialog {
+  padding: 1rem;
+  border: none;
+  background-color: #222;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+dialog img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 85vw;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
 h1 {
     color: #e9f4f7;
     margin: 0;
@@ -25,6 +42,7 @@ h1 {
 }
 
 .menu-btn {
+    display: block;
     Background: none;
     border: none;
     color: #e9f4f7;
@@ -123,5 +141,14 @@ nav {
 @media (min-width: 1000px) {
   .image-container {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .menu-btn{
+    display: none;
+  }
+
+  nav { 
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
   }
 }

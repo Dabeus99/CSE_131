@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flick Picks shares movie details and reviews.">
+    <title>Flick Picks | Movie Reviews</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to movie reviews</a>
+
+    <header class="site-header" id="top">
+      <h1><a href="#top">Flick Picks</a></h1>
+      <nav aria-label="Main navigation">
+        <ul class="main-nav">
+          <li><a href="#top">Home</a></li>
+          <li><a href="#movie-list">Reviews</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="movie-list" aria-labelledby="reviews-heading">
+        <h2 class="section-title" id="reviews-heading">Movie Reviews</h2>
+
+        <article class="movie" aria-labelledby="spider-title">
+          <h3 id="spider-title">Spider-Man: Into the Spider-Verse</h3>
+          <img
+            src="https://wddbyui.github.io/wdd131/images/spiderman.png"
+            alt="Miles Morales swings between city buildings."
+          >
+          <div class="movie-details">
+            <p><strong>Release date:</strong>
+              <time datetime="2018-12-14">December 14, 2018</time>
+            </p>
+            <p><strong>Recommended age:</strong> 10+</p>
+            <p><strong>Genre:</strong> Action and adventure</p>
+            <p>
+              <strong>Rating:</strong>
+              <span role="img" aria-label="5 out of 5 stars">★★★★★</span>
+            </p>
+          </div>
+          <p class="movie-description">
+            Miles Morales becomes the Spider-Man of his reality and crosses
+            paths with others from the multiverse.
+          </p>
+        </article>
+
+        <article class="movie" aria-labelledby="heaven-title">
+          <h3 id="heaven-title">The Other Side of Heaven</h3>
+          <img
+            src="https://wddbyui.github.io/wdd131/images/heaven.png"
+            alt="A young couple and missionaries travel in a rowboat on the ocean."
+          >
+          <div class="movie-details">
+            <p><strong>Release date:</strong>
+              <time datetime="2001-12-14">December 14, 2001</time>
+            </p>
+            <p><strong>Recommended age:</strong> 10+</p>
+            <p><strong>Genre:</strong> Drama and faith</p>
+            <p>
+              <strong>Rating:</strong>
+              <span role="img" aria-label="4 out of 5 stars">★★★★☆</span>
+            </p>
+          </div>
+          <p class="movie-description">
+            Based on the true story of John H. Groberg, a missionary in Tonga
+            in the 1950s, this film follows a journey of faith, hardship, and hope.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer id="about">
+      <p>&copy; 2026 Flick Picks</p>
+    </footer>
+  </body>
+</html>

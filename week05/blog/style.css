@@ -11,17 +11,22 @@ footer {
   border-bottom: 1px solid #ccc;
 }
 
+
+
 header,
 footer,
 .book-review {
   border-color: #f2bd86;
 }
 
+.site-header h1{
+  display: flex;
+  align-items: center;
+}
 
 .site-header a {
   color: #222;
   text-decoration: none;
-  border-top: 2px solid #f2bd86;
 }
 
 .main-nav {

@@ -8,7 +8,7 @@ header,
 footer {
   padding: 1rem;
   text-align: center;
-  border-bottom: 1px solid #ccc;
+ 
 }
 
 
@@ -19,20 +19,24 @@ footer,
   border-color: #f2bd86;
 }
 
-.site-header h1{
-  display: flex;
-  align-items: center;
-}
+
 
 .site-header a {
   color: #222;
   text-decoration: none;
 }
 
+
+
 .main-nav {
   list-style: none;
   padding: 0;
   margin: 0;
+    display: flex;
+    gap: 2em;
+    justify-content: flex-end;
+    border-top: 1px solid #f2bd86;
+    border-bottom: 1px solid #f2bd86;
 }
 
 .main-nav li {
@@ -98,21 +102,23 @@ figcaption {
   font-size: 1.1rem;
 }
 
+
+
 @media (min-width: 700px) {
   .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 2px solid #f2bd86;
+    justify-content: center;
   }
 
   .site-header h1 {
     margin: 0;
+    text-align: center;
+
   }
 
   .main-nav {
     display: flex;
     gap: 2em;
+    justify-content: flex-end;
   }
 
   .book-review {

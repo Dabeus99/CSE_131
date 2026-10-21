@@ -42,3 +42,19 @@ const testLength = (item) => {
 }
 
 const shortFruit = fruit.filter(testLength);
+console.log(shortFruit);
+
+const students = [
+{ first: "Aron", last: "Andrus", grade: "A"},
+{first: "Many", last: "Masa", grade: "B"},
+{first: "Tamanda", last: "Tanda", grade: "C"}
+];
+
+student.forEach((student) => {
+  console.log(`${student.first} ${student.last}: ${student.grade}`);
+});
+
+console.log("Index of C:", grades.indexOf("C"));
+
+const totalPoints = gpaPoints.reduce((total, points)=> total + points, 0);
+console.log("Total grade points:", totalPoints);

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <script src="form.js" defer></script>
+</head>
+<body>
+    <h1>Forms Demo</h1>
+    <form action ="" method="get"> 
+            <p>
+                <label for="fullName">Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required length="100" maxlength="100" minlength="2" pattern="/[A-Z] [a-z] [0-9]" />
+            </p>
+        <button type="submit">Submit</button>
+    </form>
+
+    <h1>Date Form</h1>
+    <form action ="" method="get"> 
+            <p>
+                <label for="availableDate">Available Date</label>
+                <input type="date" id="availableDate" name="availableDate" placeholder="Select a date" value="" />
+            </p>
+        <button type="submit">Submit</button>
+
+        <p>
+            <label for="state">State</label>
+            <select name="state" id="state" required>
+                <option value="">Select a state</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+            </select>
+        </p>
+        <button type="submit">Submit</button>
+
+
+
+    </form>
+</body>
+</html>

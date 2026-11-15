@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:description" content="Sensually appetizing recipes for your taste buds.">
+    <meta property="og:url" content="Your URL">
+    <meta property="og:image" content="images/social-preview-image.png">
+
+    <!-- X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Recipe Book">
+    <meta name="twitter:description" content="Sensually appetizing recipes for your taste buds.">
+    <meta name="twitter:image" content="images/social-preview-image.png">
+
+    <!-- One favicon (ICO works everywhere) -->
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- One Apple Touch Icon (iOS home screen) -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <header>
+        <img src="images/recipe-book.png" alt="RecipeBook logo">
+    </header>
+
+    <section class="search">
+        <input type="text" placeholder="Search recipes">
+        <button type="button">
+            <img src="images/search.svg" alt="Search">
+        </button>
+    </section>
+
+    <main>
+        <article class="recipe">
+            <img src="images/apple-crisp.jpg" alt="Apple crisp in a baking dish">
+            <div class="recipe-info">
+                <p class="tags">Dessert</p>
+                <h2>Apple Crisp</h2>
+                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+                <p class="description">This apple crisp recipe is a simple, comforting dessert with a warm, cinnamon-spiced apple filling and a crunchy oat topping.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+    </footer>
+</body>

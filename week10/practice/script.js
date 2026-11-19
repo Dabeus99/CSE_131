@@ -66,32 +66,96 @@ const hikes = [
     trailhead: [43.78555, -111.98996]
   }
 ];
- const simpleList = ["oranges", "grapes", "lemons", "apples", "Bananas", "watermelons", "coconuts", "broccoli", "mango"];
+ 
 
-
- const simpleSort = simpleList.sort()
-console.log("simple", simpleList)
-function compareFn(a,b) {
-  if (a < b) {
-    return -1;
-  } else if (a > b) {
-    return 1;
-  }
- // a must be equal to b
- return 0;
+function hikeTemplate(hike) {
+    return `
+    
+            <div class="hike-card">
+                <div class="hike-content">
+                    <h2>${hike.name}</h2>
+                    <p class="distance">Distance: ${hike.distance}</p>
+                    <div class="hike-tags">
+                        ${hike.tags.map(tagsTemplate).join("")}
+                    </div>
+                    <p class="description">${hike.description}</p>
+                    ${difficultyTemplate(hike.difficulty)}
+                </div>
+            </div>
+`
 }
 
- const anotherSort = simpleList.sort(compareFn)
- console.log(simpleList);
+function tagsTemplate(tag){
+    return`
+        <button class="tags">${tag}</button>
+    `
+}
 
- function searchList(list, search_query){
-    function searchCallback(string){
-            return string.toLowerCase().includes(search_query.toLowerCase());
+const hikeContainer = document.querySelector("#hike-container");
+
+function renderHikes(hikes) {
+    hikeContainer.innerHTML = hikes.map(hikeTemplate).join("");
+
+}
+
+function difficultyTemplate(rating){
+    let html = 
+    `
+    
+    <span class="rating"
+    role="img"
+    aria-label="Difficulty: ${rating} out of 5"
+    >
+    Difficulty:
+`
+
+for (let i = 0; i<5; i++){
+    if(i < rating){
+        html += '<span aria-hidden="true" class="icon-boot">🥾</span>'
     }
-    const filteredList = list.filter(searchCallback);
-    return filteredList;
+        else {
+            html += `<span aria-hidden="true" class="icon-empty">▫️</span>`
+        }
 
- }
+}
+html += `</span>`
 
- const filtered = searchList(simpleList, "b");
- console.log(filtered);
+return html
+
+
+}
+
+const searchInput = document.querySelector("#search");
+const searchButton = document.querySelector("#search-button");
+
+function searchHikes() {
+    const searchText = searchInput.value.toLowerCase().trim();
+
+    if (searchText === "") {
+        showRandomHike();
+        return;
+    }
+
+    const matchingHikes = hikes.filter(hike =>
+        hike.name.toLowerCase().includes(searchText) ||
+        hike.description.toLowerCase().includes(searchText) ||
+        hike.tags.join(" ").toLowerCase().includes(searchText)
+  );
+
+  const sortedHikes = matchingHikes.sort((a, b) => parseFloat(a.distance) - parseFloat(b.distance));
+
+  renderHikes(sortedHikes);
+}
+
+searchButton.addEventListener("click", searchHikes);
+searchInput.addEventListener("input", searchHikes);
+
+function showRandomHike() {
+  const randomIndex = Math.floor(Math.random() * hikes.length);
+  const randomHike = hikes[randomIndex];
+
+  renderHikes([randomHike]);
+}
+
+showRandomHike();
+

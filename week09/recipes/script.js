@@ -340,10 +340,15 @@ return html
 //Search Bar
 const searchInput = document.querySelector("#search");
 const searchButton = document.querySelector("#search-button");
-const recipeList = document.querySelector("main");
+const recipeList = document.querySelector("#recipeList");
 
 function searchRecipes() {
   const searchText = searchInput.value.toLowerCase().trim();
+
+  if (searchText === "") {
+    showRandomRecipe();
+    return;
+  }
 
   const matchingRecipes = recipes.filter(recipe =>
     recipe.name.toLowerCase().includes(searchText) ||
@@ -356,4 +361,34 @@ function searchRecipes() {
 searchButton.addEventListener("click", searchRecipes);
 
 searchInput.addEventListener("input", searchRecipes);
+
+function showRandomRecipe() {
+  const randomIndex = Math.floor(Math.random() * recipes.length);
+  const randomRecipe = recipes[randomIndex];
+
+  renderRecipes([randomRecipe]);
+}
+
+function searchRecipes() {
+  const searchText = searchInput.value.toLowerCase().trim();
+
+  if (searchText === "") {
+    showRandomRecipe();
+    return;
+  }
+
+  const matchingRecipes = recipes.filter(recipe =>
+    recipe.name.toLowerCase().includes(searchText) ||
+    recipe.tags.join(" ").toLowerCase().includes(searchText)
+  );
+
+  renderRecipes(matchingRecipes);
+}
+
+searchButton.addEventListener("click", searchRecipes);
+searchInput.addEventListener("input", searchRecipes);
+
+showRandomRecipe();
+searchRecipes();
+showRandomRecipe();
 

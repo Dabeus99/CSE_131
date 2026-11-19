@@ -115,6 +115,10 @@ footer {
   height: 20px;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Mobile layout */
 @media (max-width: 600px) {
   body {
